@@ -52,9 +52,9 @@ open SalesforceMobileSDK.xcworkspace
 
 * Run the sample. 
 
-###  Mobile SDK Internal working
+###  Mobile SDK Internals
 
-* The custom SFLoginViewController that is configured in the app delegate is presented to the user, whenever necessary. A  webview  is required ( can be invisible). 
+* The custom SFLoginViewController that is configured in the app delegate is presented to the user, whenever necessary. A  webview  is required (can be invisible). 
 
 
 * The Mobile SDK then submits  a POST method call  to the endpoint for embedded url   (<loginhost>/servlet/servlet.loginwidgetcontroller) with the following url encoded post body.
