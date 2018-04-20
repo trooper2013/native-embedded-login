@@ -74,4 +74,22 @@ open SalesforceMobileSDK.xcworkspace
     ```
 * Once the webview is loaded with the result url, the mobile sdk should complete the auth flow eventually invoking the completion blocks specified with the SFUserAccountManager:loginWithUserName:pasword method.
 
+### Issues:
+1. If errors occur, the embedded endpoint returns the following which is insufficient.
+```
+{
+    result = invalid;
+}
+
+```
+2. Forgot password flow has to be displayed in a webview which should support mobile sdk.
+
+3. The embedded endpoint doesn't seem to exist with non-community setup. 
+
+4. Pre-determine  whether or not to show webview for Authorization/2FA is required.
+
+5. Dependency on using frontdoor.jsp forces the mobile sdk to hold on to a  webview. A better approach could be to  obtain  structured data from the embedded login endpoint and then use the code/token/sid against the token endpoint.
+
+
+
   
